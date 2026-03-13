@@ -1,0 +1,9 @@
+fastapi
+uvicorn[standard]
+python-dotenv
+pydantic
+supabase
+python-telegram-bot==22.6
+requests
+httpx
+google-genai
