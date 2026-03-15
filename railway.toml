@@ -3,3 +3,7 @@ builder = "python"
 
 [deploy]
 startCommand = "python run.py"
+
+[service]
+name = "web"
+port = 8000
