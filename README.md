@@ -1,25 +1,68 @@
-# Gigabot
+# 🚀 Быстрое развертывание Gigabot
 
-Система для продажи интернет-пакетов (гигабайт) в Казахстане.
+## ⚡ 5-минутное развертывание
 
-## Описание
+### Шаг 1: Создайте GitHub репозиторий
+1. Перейдите на [github.com/new](https://github.com/new)
+2. **Repository name:** `gigabot`
+3. **Public** репозиторий
+4. **НЕ** добавляйте README, .gitignore, лицензию
+5. Нажмите **"Create repository"**
 
-Проект состоит из двух подсистем:
+### Шаг 2: Загрузите код
+```bash
+# Распакуйте gigabot.zip
+# Откройте командную строку в папке gigabot
 
-1. **WhatsApp агент** для общения с клиентами, реализованный на FastAPI и Green API. Агент ведёт себя как живой продавец.
-2. **Telegram бот** для продавцов, которые регистрируются, управляют заказами и получают уведомления.
+git init
+git add .
+git commit -m "Initial commit: Gigabot system"
 
-Система использует Supabase для хранения данных, Gemini 1.5 Flash для ИИ и проверки чеков, а также Railway для хостинга.
+# Замените YOUR_USERNAME на ваш GitHub username
+git remote add origin https://github.com/YOUR_USERNAME/gigabot.git
+git push -u origin master
+```
 
-## Технологии
+### Шаг 3: Разверните на Railway
+1. Перейдите на [railway.app](https://railway.app)
+2. **"New Project"** → **"Deploy from GitHub"**
+3. Выберите репозиторий `gigabot`
+4. Railway автоматически настроит проект
 
-- Python 3.11+
-- FastAPI
-- Supabase (Postgres)
-- Green API (WhatsApp)
-- python-telegram-bot
-- Gemini 1.5 Flash (Google generative AI)
-- Railway (развертывание)
+### Шаг 4: Настройте переменные окружения
+В Railway dashboard → **"Variables"** добавьте:
+
+```
+GREEN_API_INSTANCE=7107545439
+GREEN_API_TOKEN=5aa8dc496eb044a68228a384d2401e730ada5836ff524ba49d
+TELEGRAM_BOT_TOKEN=8211971230:AAFGBCtUDeB1fmbzjF8jxlRtwv9dElDOC2o
+GEMINI_API_KEY=AIzaSyAE92xGyIeM3FFvRidMvQpsUSBXEJFUj-I
+SUPABASE_URL=https://nmekwenrkzpwzyiqovjx.supabase.co
+SUPABASE_KEY=sb_secret_YJ0LGnuQ88a-uPop3Jj74g_W0D0Z-Cu
+SUBSCRIPTION_CARD=7476734610
+SUBSCRIPTION_PRICE=500
+TRIAL_DAYS=7
+TELEGRAM_SELLER_ID=123456789
+```
+
+### Шаг 5: Настройте вебхуки
+1. Скопируйте URL из Railway: `https://xxxxx.railway.app`
+2. В Green API настройте вебхук: `https://xxxxx.railway.app/whatsapp/webhook`
+
+## ✅ Готово!
+
+Теперь ваша система работает:
+- WhatsApp бот принимает заказы
+- Telegram бот управляет продавцами
+- ИИ отвечает естественно
+- Платежи проверяются автоматически
+
+## 🔧 Локальный запуск
+
+```bash
+pip install -r requirements.txt
+python run.py
+```
 
 ## Развертывание на Railway
 
