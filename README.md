@@ -33,17 +33,7 @@ git push -u origin master
 В Railway dashboard → **"Variables"** добавьте:
 
 ```
-GREEN_API_INSTANCE=7107545439
-GREEN_API_TOKEN=5aa8dc496eb044a68228a384d2401e730ada5836ff524ba49d
-TELEGRAM_BOT_TOKEN=8211971230:AAFGBCtUDeB1fmbzjF8jxlRtwv9dElDOC2o
-GEMINI_API_KEY=AIzaSyAE92xGyIeM3FFvRidMvQpsUSBXEJFUj-I
-SUPABASE_URL=https://nmekwenrkzpwzyiqovjx.supabase.co
-SUPABASE_KEY=sb_secret_YJ0LGnuQ88a-uPop3Jj74g_W0D0Z-Cu
-SUBSCRIPTION_CARD=7476734610
-SUBSCRIPTION_PRICE=500
-TRIAL_DAYS=7
-TELEGRAM_SELLER_ID=123456789
-```
+
 
 ### Шаг 5: Настройте вебхуки
 1. Скопируйте URL из Railway: `https://xxxxx.railway.app`
